@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import MenuPop from "../../pages/MenuPop";
 import "./Header.css";
 import Logo from "../../assets/huego1.png";
+import searchIcon from "../../assets/searchnew.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function Header() {
 
       <div className="searchBox">
         <button className="searchBtn">
-            <img src="/src/assets/searchnew.svg" alt="Search" style={{width:24, height: 24}} />
+            <img src={searchIcon} alt="Search" style={{width:24, height: 24}} />
         </button>
         <span>Search palette</span>
       </div>
