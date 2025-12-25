@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import MenuPop from "../../pages/MenuPop";
 import "./Header.css";
+import Logo from "../../assets/huego1.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Header() {
     <header className="header">
       <div className="logoandname">
         <div className="logo">
-          <img src="/src/assets/huego1.png" alt="Huego Logo"  style={{width: 60, height: 60}} />
+          <img src={Logo} alt="Huego Logo"  style={{width: 60, height: 60}} />
         </div>
         <h2>Huego</h2>
       </div>
