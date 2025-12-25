@@ -1,18 +1,12 @@
 import { useState, type JSX } from 'react';
-// IMPORT the Palette type from your central definitions file
 import LikeButton from "../LikeButton/LikeButton"; 
 import './PaletteDetails.css'
-import type { Palette } from "../../types/Palette"; // Adjust the path as needed
+import type { Palette } from "../../types/Palette";
 
-
-// Define the component's props using the imported Palette type
 interface PaletteDetailsProps {
   palette: Palette;
 }
 
-/**
- * Calculates the relative time difference (e.g., '2 days ago').
- */
 const getDaysSince = (timestamp: string): string => {
   if (!timestamp) return 'No date available';
 
@@ -61,7 +55,7 @@ export default function PaletteDetails({ palette }: PaletteDetailsProps): JSX.El
 
     setTimeout(() => {
       setCopiedIndex(null);
-    }, 1000); // show "Copied!" for 1 sec
+    }, 1000); // show copied for 1 sec
   };
 
   const timeAgo = getDaysSince(palette.createdAt);
@@ -69,7 +63,6 @@ export default function PaletteDetails({ palette }: PaletteDetailsProps): JSX.El
   return (
     <div className="paletteCard">
       <div className="colorsRow">
-        {/* Iterate over colors, accessing color.hex */}
         {palette.colors.map((color, i) => (
           <div
             key={i}
@@ -92,12 +85,10 @@ export default function PaletteDetails({ palette }: PaletteDetailsProps): JSX.El
 
       <div className="paletteInfo">
         <LikeButton
-          paletteId={palette._id}                // or palette.id depending on your type
-          initialLikes={palette.likes}      // fallback to 0 if undefined
-          // initialLiked={false}                   // we'll improve this later
+          paletteId={palette._id}               
+          initialLikes={palette.likes}     
           initialLiked={palette.likedBy.includes(localStorage.getItem("userId")!)}
         />
-        {/* Use the new function result here */}
         <span className="createdAt">{timeAgo}</span> 
       </div>
     </div>

@@ -6,7 +6,7 @@ export const getAllPalettes = async (req:Request, res: Response) => {
     const skip: number = parseInt(req.query.skip as string) || 0;
     const limit: number = parseInt(req.query.limit as string) || 40;
 
-    const total: number = await Palette.countDocuments(); // <--- key part
+    const total: number = await Palette.countDocuments(); 
 
     const palettes = await Palette.find({})
       .sort({ createdAt: -1 })
@@ -79,7 +79,7 @@ export const toggleLike = async (req: Request, res: Response) => {
       palette.likedBy.push(userId);
     }
 
-    palette.likes = palette.likedBy.length; // sync likes always
+    palette.likes = palette.likedBy.length;
     await palette.save();
 
     console.log("Successfully toggled like");
@@ -98,7 +98,7 @@ export const toggleLike = async (req: Request, res: Response) => {
 
 export const favorites = async (req: Request, res: Response) => {
   try {
-    const userId = req.params.userId;  // ⭐ FROM URL PARAMS
+    const userId = req.params.userId; 
 
     console.log("Favorites controller hit, userId:", userId);
 

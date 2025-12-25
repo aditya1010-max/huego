@@ -194,7 +194,6 @@ const seedPalettes = async () => {
     }
   ]
 );
-
     console.log("Seed data inserted successfully ✔");
     process.exit(0);
 

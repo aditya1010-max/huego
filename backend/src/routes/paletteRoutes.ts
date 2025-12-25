@@ -13,7 +13,7 @@ router.get("/popular", filterPalettes);
 router.get("/random", filterPalettes);
 
 
-router.get("/:filter", filterPalettes);// router.get("/retro", filterPalettes);
+router.get("/:filter", filterPalettes);
 
 export default router;
 

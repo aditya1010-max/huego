@@ -1,4 +1,3 @@
-/* LIKE BUTTON */
 .likeBtn {
   background: transparent;
   border: none;
@@ -23,7 +22,6 @@
   transform: scale(0.95);
 }
 
-/* ICON */
 .likeBtn img {
   width: 20px;
   height: 20px;

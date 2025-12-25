@@ -3,7 +3,7 @@ import img1 from "../../assets/new.svg"
 import img2 from "../../assets/collection.svg"
 import img3 from "../../assets/random.svg"
 import img4 from "../../assets/popular.svg"
-import { NavLink } from "react-router-dom"; // ⭐ Add this
+import { NavLink } from "react-router-dom"; 
 
 
 const mainMenu = [
@@ -59,7 +59,7 @@ export default function Sidebar() {
 
       <ul className="collection-list">
         {collections.map((col) => {
-          const slug = col.toLowerCase(); // ⭐ convert to usable filter path
+          const slug = col.toLowerCase(); 
           return (
             <NavLink
               key={col}

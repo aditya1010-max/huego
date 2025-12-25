@@ -43,7 +43,7 @@ export default function PaletteGrid() {
     } finally {
       setLoading(false);
     }
-  }, [filter, skip]); // ⬅️ ONLY depend on skip + filter
+  }, [filter, skip]);
 
   // Reset when filter changes
   useEffect(() => {

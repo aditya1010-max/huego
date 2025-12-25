@@ -6,9 +6,9 @@ export interface Color {
 
 export interface Palette extends Document {
   name: string;
-  colors: Color[]; // always length of 4
+  colors: Color[]; 
   likes: number;
-  likedBy: string[]; // Add this
+  likedBy: string[]; 
   category: [string];
   createdAt: Date;
   updatedAt: Date;
@@ -44,7 +44,7 @@ const PaletteSchema = new Schema<Palette>(
       type: Number,
       default: 0
     },
-    likedBy: { type: [String], default: [] }, // ⭐ IMPORTANT LINE ⭐
+    likedBy: { type: [String], default: [] }, 
 
     category: {
       type: [String],

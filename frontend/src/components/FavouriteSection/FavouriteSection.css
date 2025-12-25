@@ -15,7 +15,6 @@
   overflow-y: visible;
   overflow-x: hidden;
 
-
   /* Keep scrollbar hidden trick */
 }
 
@@ -23,16 +22,14 @@
   display: none;
 }
 
-/* HEADING WRAPPER */
 .classforborderbelowheading {
   position: sticky;
-  height: auto; /* unified */
-  padding-top: 0; /* moved from below duplicate */
+  height: auto; 
+  padding-top: 0; 
   padding-top: 90px;
 
 }
 
-/* HEADING */
 .classforborderbelowheading h1 {
   font-size: 1.8rem;
   font-weight: 400;
@@ -44,18 +41,15 @@
 
 }
 
-/* Not deleted - but grouping below */
 .classforborderbelowheading .h1 {
   position: fixed;
 }
 
-/* FIXED DIV */
 .divforheading {
   z-index: 200;
   position: sticky; 
 }
 
-/* FAVORITES GRID */
 .favoritesGrid {
   display: flex;
   flex-direction: row;
@@ -66,7 +60,6 @@
   margin-top: 0px;
 }
 
-/* FAVORITE ITEM */
 .favoriteCard {
   background: #fff;
   border-radius: 6px;
@@ -78,7 +71,6 @@
   width: 70px;
 }
 
-/* REMOVE BUTTON */
 .removeBtn {
   position: absolute;
   top: 3px;
@@ -106,7 +98,6 @@
   transform: scale(1);
 }
 
-/* MINI COLORS INSIDE CARD */
 .miniPaletteRow {
   display: flex;
   flex-direction: column;

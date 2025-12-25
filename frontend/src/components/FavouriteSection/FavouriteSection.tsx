@@ -33,7 +33,7 @@ export default function Favorites() {
   const handleRemoveLike = async (paletteId: string) => {
     const oldFavorites = [...favorites]; // backup UI state
 
-    // 1️⃣ Optimistic UI update – instant remove
+    // ui update – instant remove
     setFavorites(prev => prev.filter(p => p._id !== paletteId));
 
     try {
@@ -45,11 +45,11 @@ export default function Favorites() {
 
       const data = await res.json();
 
-      // 2️⃣ If API call failed, restore old state
+      // if api call failed, restore old state
       if (data.liked) {
         setFavorites(oldFavorites);
       } else {
-        // 3️⃣ Silent background sync (optional)
+        // slient background sync 
         fetchFavs();
       }
 
@@ -57,7 +57,7 @@ export default function Favorites() {
         detail: { 
           paletteId, 
           liked: false,
-          likes: data.likes   // ⭐ include updated like count
+          likes: data.likes   
         }
       }));
 
@@ -79,7 +79,6 @@ export default function Favorites() {
           {favorites.map(palette => (
             <div key={palette._id} className="favoriteCard">
 
-              {/* ❌ Remove On Click */}
               <button className="removeBtn" onClick={() => handleRemoveLike(palette._id)}>
                 ✕
               </button>

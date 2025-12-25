@@ -1,4 +1,3 @@
-/* PALETTE INFO */
 .createdAt {
   text-align: center;
   align-items: baseline;
@@ -17,7 +16,6 @@
   aspect-ratio: 1 / 1;
 }
 
-/* HEX OVERLAY TEXT */
 .hexText {
   font-size: 15px;
   font-weight: 400;
@@ -35,10 +33,9 @@
 }
 
 .hexText.active {
-  background: #000000; /* whatever color */
+  background: #000000; 
 }
 
-/* COLOR BOXES */
 .colorBox {
   position: relative;
   cursor: pointer;
@@ -62,7 +59,6 @@
   border-bottom-left-radius: 9px;
 }
 
-/* HOVER STATE */
 .colorBox:hover .hexText {
   opacity: 1;
 }

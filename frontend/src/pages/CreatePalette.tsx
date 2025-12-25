@@ -201,9 +201,6 @@ const CreatePalette: React.FC = () => {
             category step by step.
           </p>
 
-          {/* We will wire these later */}
-          {/* <input ... /> */}
-          {/* <select ... /> */}
         </section>
 
         <section className="createWorkspace">

@@ -3,7 +3,7 @@ import './LikeButton.css';
 import { getUserId } from "../../utils/user";
 import Heart from "../../assets/heart-red.svg"
 import heartFilled from "../../assets/heart-black.svg"
-// Props type
+
 interface LikeButtonProps {
   paletteId: string;
   initialLikes: number;

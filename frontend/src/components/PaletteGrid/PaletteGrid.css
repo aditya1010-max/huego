@@ -1,12 +1,9 @@
-
-/* PALETTE GRID */
 .paletteGrid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
   padding: 0 20px 400px 20px; /* bottom buffer */
-  /* margin-top: 10px; */
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -16,12 +13,10 @@
 
 }
 
-/* PALETTE CARD HOVER */
 .paletteCard:hover {
   transform: translateY(0);
 }
 
-/* COLOR SQUARE CARD */
 .colorsRow {
   display: flex;
   flex-direction: column;
@@ -31,7 +26,6 @@
   cursor: pointer;
 }
 
-/* PALETTE CARD FOOTER (INFO ROW) */
 .paletteInfo {
   display: flex;
   justify-content: space-between;
@@ -42,7 +36,6 @@
   padding: 3px 0px 0px 0p;
 }
 
-/* LIKES COUNTER BADGE */
 .likes {
   background: #f4f4f4;
   padding: 4px 8px;

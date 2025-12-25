@@ -8,7 +8,6 @@ import "./App.css";
 export default function MainLayout() {
   return (
     <div className="appContainer">
-      {/* spacer for the fixed header */}
       <div className="headerWrapper">
         <Header />
       </div>
