@@ -1,0 +1,75 @@
+.createHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #6A5AE0, #8A7CFF);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.saveBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pickerContainer {
+    padding: 100px;
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pickerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hexInput {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100px;
+  font-weight: bold;
+}
+
+.addColorBtn {
+  background: #6A5AE0;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.addColorBtn:hover {
+  opacity: 0.9;
+}
+
+.selectedPreview {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.selectedColor {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #eee;
+  transition: 0.2s;
+}
+.selectedColor:hover {
+  transform: scale(1.08);
+  border-color: #6A5AE0;
+}

@@ -1,0 +1,186 @@
+/* Overlay
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  z-index: 2000;
+}
+
+.modalBox {
+  background: #ffffff;
+  width: 420px;
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  animation: modalPop 0.25s ease-out;
+}
+
+.modalBox h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: #222;
+  font-weight: 600;
+}
+
+.modalBox input,
+.modalBox select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  background: #fafafa;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.modalBox input:focus,
+.modalBox select:focus {
+  border-color: #6a5acd;
+  outline: none;
+  box-shadow: 0 0 4px rgba(106, 90, 205, 0.4);
+}
+
+.modalActions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modalActions button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out, transform 0.15s;
+}
+
+.modalActions button[type="submit"] {
+  background: #6a5acd;
+  color: #ffffff;
+}
+
+.modalActions button[type="submit"]:hover {
+  background: #594ac8;
+  transform: scale(1.04);
+}
+
+.modalActions button[type="button"] {
+  background: #eeeeee;
+  color: #333;
+}
+
+.modalActions button[type="button"]:hover {
+  background: #dddddd;
+  transform: scale(1.04);
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+} */
+
+
+
+
+/* src/pages/CreatePalette.css */
+.createPage {
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.createHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backLink {
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.saveBtn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.saveBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.createContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 24px;
+}
+
+.createMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.createTitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.createSubtitle {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.createWorkspace {
+  min-height: 220px;
+  display: flex;
+  align-items: stretch;
+}
+
+.emptyStateBox {
+  border-radius: 16px;
+  border: 1px dashed #d1d5db;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.emptyText {
+  font-size: 13px;
+  opacity: 0.7;
+}

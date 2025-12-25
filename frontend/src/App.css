@@ -1,0 +1,66 @@
+/* HEADER WRAPPER – just reserves space for the fixed header */
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+}
+
+
+/* MAIN LAYOUT AREA BELOW HEADER */
+.contentWrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 10px);
+  overflow: hidden;            /* lock page scroll */
+}
+
+/* LEFT SIDEBAR */
+.sidebarWrapper {
+  width: 175px;
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* CENTER CONTENT – THIS is the scroll owner for palettes */
+.centerWrapper {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;     /* crucial for flex scrolling */
+}
+
+/* RIGHT SIDEBAR */
+.favoritesWrapper {
+  width: 265px;
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* the .sidebar, .paletteGrid etc. styles from other files stay as they are */
+.sidebarWrapper,
+.centerWrapper,
+.favoritesWrapper {
+  min-width: 0;  /* super important! */
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+.sidebarWrapper,
+.centerWrapper,
+.favoritesWrapper {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.sidebarWrapper::-webkit-scrollbar,
+.centerWrapper::-webkit-scrollbar,
+.favoritesWrapper::-webkit-scrollbar {
+  display: none;
+}

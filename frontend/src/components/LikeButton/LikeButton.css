@@ -1,0 +1,36 @@
+/* LIKE BUTTON */
+.likeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: 0.2px solid rgb(224, 224, 224);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.likeBtn:hover {
+  background: rgba(232, 232, 232, 0.266);
+}
+
+.likeBtn:active {
+  transform: scale(0.95);
+}
+
+/* ICON */
+.likeBtn img {
+  width: 20px;
+  height: 20px;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.likeBtn:hover img {
+  transform: scale(1.15);
+}

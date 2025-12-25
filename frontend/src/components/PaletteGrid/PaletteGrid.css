@@ -1,0 +1,51 @@
+
+/* PALETTE GRID */
+.paletteGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0 20px 400px 20px; /* bottom buffer */
+  /* margin-top: 10px; */
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;  /* needed together with parent height */
+  min-height: 0; /* absolutely required in flex layouts */
+  padding-top: 80px;
+
+}
+
+/* PALETTE CARD HOVER */
+.paletteCard:hover {
+  transform: translateY(0);
+}
+
+/* COLOR SQUARE CARD */
+.colorsRow {
+  display: flex;
+  flex-direction: column;
+  width: clamp(180px, 15vw, 280px);
+  height: clamp(180px, 15vw, 280px);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+/* PALETTE CARD FOOTER (INFO ROW) */
+.paletteInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+  font-family: sans-serif;
+  padding: 3px 0px 0px 0p;
+}
+
+/* LIKES COUNTER BADGE */
+.likes {
+  background: #f4f4f4;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}

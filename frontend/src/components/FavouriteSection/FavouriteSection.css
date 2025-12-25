@@ -1,0 +1,123 @@
+/* FAVORITES CONTAINER */
+.favoritesContainer {
+  width: 260px;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-self: baseline;
+  align-items: center;
+  border-left: 1px solid black;
+  position: sticky;
+  top: 0;
+
+  overflow-y: visible;
+  overflow-x: hidden;
+
+
+  /* Keep scrollbar hidden trick */
+}
+
+.favoritesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* HEADING WRAPPER */
+.classforborderbelowheading {
+  position: sticky;
+  height: auto; /* unified */
+  padding-top: 0; /* moved from below duplicate */
+  padding-top: 90px;
+
+}
+
+/* HEADING */
+.classforborderbelowheading h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(41, 41, 41, 0.651);
+  margin-bottom: 8px;
+  padding-left: 49px;
+  align-self: center;
+  font-family: Inter, sans-serif;
+
+}
+
+/* Not deleted - but grouping below */
+.classforborderbelowheading .h1 {
+  position: fixed;
+}
+
+/* FIXED DIV */
+.divforheading {
+  z-index: 200;
+  position: sticky; 
+}
+
+/* FAVORITES GRID */
+.favoritesGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 260.8px;
+  height: auto;
+  gap: 6px;
+  margin-top: 0px;
+}
+
+/* FAVORITE ITEM */
+.favoriteCard {
+  background: #fff;
+  border-radius: 6px;
+  margin: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  height: 70px;
+  width: 70px;
+}
+
+/* REMOVE BUTTON */
+.removeBtn {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  font-size: 10px;
+  background: rgba(235, 235, 235, 0.999);
+  color: #282828;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.85);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.removeBtn:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.favoriteCard:hover .removeBtn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* MINI COLORS INSIDE CARD */
+.miniPaletteRow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.miniColor {
+  flex: 1;
+  height: 100%;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed": "ts-node-dev --transpile-only src/seed.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/mongoose": "^5.11.96",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19"
+  }
+}

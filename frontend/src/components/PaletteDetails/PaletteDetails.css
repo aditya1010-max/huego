@@ -1,0 +1,68 @@
+/* PALETTE INFO */
+.createdAt {
+  text-align: center;
+  align-items: baseline;
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 0%;
+  color: rgb(115, 116, 116);
+}
+
+.paletteInfo {
+  padding: 10px 0 0 0;
+}
+
+.paletteCard {
+  aspect-ratio: 1 / 1;
+}
+
+/* HEX OVERLAY TEXT */
+.hexText {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'monsterrat', 'roboto';
+  color: #ffffff;
+  opacity: 0;
+  background: #0000001A;
+  padding: 3px 6px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  border-bottom-left-radius: 1px;
+}
+
+.hexText.active {
+  background: #000000; /* whatever color */
+}
+
+/* COLOR BOXES */
+.colorBox {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s;
+}
+
+.colorBox:nth-child(1) {
+  flex: 41;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.colorBox:nth-child(2) { flex: 26; }
+
+.colorBox:nth-child(3) { flex: 18; }
+
+.colorBox:nth-child(4) {
+  flex: 15;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+/* HOVER STATE */
+.colorBox:hover .hexText {
+  opacity: 1;
+}
