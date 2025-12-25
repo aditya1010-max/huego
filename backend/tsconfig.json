@@ -102,5 +102,6 @@
     "moduleResolution": "node",     // ⭐ ADD THIS
     "types": ["node"],              // ⭐ ADD THIS
     "lib": ["ES2016"],               // ⭐ ADD THIS                              /* Skip type checking all .d.ts files. */
+    
   }
 }
