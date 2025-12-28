@@ -4,6 +4,8 @@ import type { Palette } from "../../types/Palette";
 import './FavouriteSection.css'
 import { getUserId } from "../../utils/user";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState<Palette[]>([]);
@@ -37,7 +39,7 @@ export default function Favorites() {
     setFavorites(prev => prev.filter(p => p._id !== paletteId));
 
     try {
-      const res = await fetch(`http://localhost:5000/api/palettes/${paletteId}/like`, {
+      const res = await fetch(`${API_BASE}/api/palettes/${paletteId}/like`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: getUserId() })

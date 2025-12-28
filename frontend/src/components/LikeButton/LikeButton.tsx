@@ -4,6 +4,9 @@ import { getUserId } from "../../utils/user";
 import Heart from "../../assets/heart-red.svg"
 import heartFilled from "../../assets/heart-black.svg"
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
+
 interface LikeButtonProps {
   paletteId: string;
   initialLikes: number;
@@ -16,7 +19,7 @@ export default function LikeButton({ paletteId, initialLikes, initialLiked }: Li
 
 
   const handleLike = async () => {
-    const res = await fetch(`http://localhost:5000/api/palettes/${paletteId}/like`, {
+    const res = await fetch(`${API_BASE}/api/palettes/${paletteId}/like`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
