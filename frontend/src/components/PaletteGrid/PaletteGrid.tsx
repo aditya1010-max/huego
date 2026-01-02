@@ -87,7 +87,7 @@ export default function PaletteGrid() {
       ))}
 
       {loading && (
-        <p style={{ textAlign: "center", opacity: 0.6 }}>Loading…</p>
+        <p style={{ textAlign: "center", opacity: 0.6 }}>due to cold start problem, Loading palettes will takes at least 40-50 seconds for first time every 30 minutes..., backend is running on free instance, sorry for incovience😓!!</p>
       )}
 
       {!loading && !hasMore && palettes.length > 0 && (
