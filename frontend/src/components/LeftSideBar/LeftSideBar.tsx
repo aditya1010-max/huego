@@ -32,6 +32,8 @@ const collections = [
   "Forest",
   "Sunrise",
   "Storm",
+  "Ocean",
+  "Desert",
 ];
 
 
