@@ -1,0 +1,211 @@
+HUEGO – Project Architecture
+1. High-Level Overview
+
+Huego is a full-stack web application for discovering, liking, and organizing color palettes.
+
+The project is divided into two independent layers:
+
+Frontend → React + TypeScript (UI & user interaction)
+
+Backend → Node.js + TypeScript (API & data handling)
+
+Both layers live in a single monorepo for easier development and deployment.
+
+HUEGO/
+├── backend/     → API, business logic, database
+└── frontend/    → UI, components, user experience
+
+2. Backend Architecture (/backend)
+
+The backend is responsible for:
+
+Serving palette data
+
+Handling likes / favorites
+
+Managing API endpoints
+
+Interacting with the database
+
+backend/
+├── src/                 → Source code
+│   ├── routes/          → API route definitions
+│   ├── controllers/     → Request → Response logic
+│   ├── services/        → Business logic
+│   ├── models/          → Database schemas / types
+│   └── index.ts         → App entry point
+│
+├── dist/                → Compiled JS output (build)
+├── node_modules/
+├── .env                 → Environment variables
+├── package.json
+├── tsconfig.json
+
+Backend Flow
+Client Request
+   ↓
+Route
+   ↓
+Controller
+   ↓
+Service
+   ↓
+Database
+   ↓
+Response
+
+
+The backend is stateless and exposes a REST API consumed by the frontend.
+
+3. Frontend Architecture (/frontend)
+
+The frontend is a component-driven React application written in TypeScript.
+
+Its responsibilities:
+
+Rendering palettes
+
+Handling user interactions (like, favorite)
+
+Fetching data from backend APIs
+
+Managing UI state
+
+frontend/
+├── public/              → Static assets
+├── src/
+│   ├── assets/          → Images, icons
+│   ├── components/      → Reusable UI components
+│   │
+│   ├── CollectionSection/
+│   │   ├── CollectionSection.tsx
+│   │   └── CollectionSection.css
+│   │
+│   ├── FavouriteSection/
+│   │   ├── FavouriteSection.tsx
+│   │   └── FavouriteSection.css
+│   │
+│   ├── PaletteGrid/
+│   │   ├── PaletteGrid.tsx
+│   │   └── PaletteGrid.css
+│   │
+│   ├── PaletteCard/
+│   │   ├── PaletteCard.tsx
+│   │   └── PaletteCard.css
+│   │
+│   ├── LikeButton/
+│   │   ├── LikeButton.tsx
+│   │   └── LikeButton.css
+│   │
+│   ├── Header/
+│   ├── LeftSideBar/
+│   ├── PaletteDetails/
+│   │
+│   ├── App.tsx          → App root
+│   └── main.tsx         → Entry point
+│
+├── package.json
+
+4. Component Philosophy
+
+Huego follows a UI-first, composable architecture.
+
+Small components do one thing well
+
+Sections compose multiple components
+
+Pages compose sections
+
+Example:
+
+PaletteGrid
+ ├── PaletteCard
+ │    ├── LikeButton
+ │    └── ColorPreview
+ └── Pagination / Filters
+
+
+This keeps the UI:
+
+Reusable
+
+Testable
+
+Easy to extend
+
+5. Data Flow (Frontend ↔ Backend)
+User Action (Like Palette)
+        ↓
+React Component
+        ↓
+API Call (fetch / axios)
+        ↓
+Backend Route
+        ↓
+Database Update
+        ↓
+Updated Response
+        ↓
+UI Re-render
+
+
+The frontend never directly accesses the database — all communication goes through the backend API.
+
+6. Styling Strategy
+
+Each component has its own CSS file
+
+Styles are scoped by convention
+
+No global CSS pollution
+
+Easy to refactor or migrate to CSS Modules / Tailwind later
+
+7. Why This Architecture?
+
+✔ Clear separation of concerns
+✔ Scales well as features grow
+✔ Easy for new contributors to understand
+✔ Production-ready structure
+
+This architecture intentionally avoids premature complexity while leaving room for:
+
+Authentication
+
+Caching
+
+Server-side rendering
+
+Mobile clients
+
+AI-based palette generation
+
+8. Future Improvements (Planned)
+
+Centralized API service layer (frontend)
+
+Global state management (Context / Zustand)
+
+Authentication & user profiles
+
+Rate limiting & caching
+
+Testing (unit + integration)
+
+9. Summary
+
+Huego is built with:
+
+Simple mental model
+
+Modern best practices
+
+Real-world scalability in mind
+
+If you’re new to the project, start here:
+
+frontend/src/components
+
+backend/src/routes
+
+Follow the data flow
