@@ -15,6 +15,8 @@ export default function PaletteGrid() {
   const [hasMore, setHasMore] = useState(true);
   const { filter } = useParams();
 
+  console.log("API_BASE:", import.meta.env.VITE_API_URL);
+
   const fetchPalettes = useCallback(async () => {
     if (loading || !hasMore) return;
 
