@@ -78,9 +78,8 @@ export default function PaletteGrid() {
   }, [loading, hasMore]);
 
   return (
-    
     <div className="paletteGrid">
-      console.log("API_BASE:", API_BASE);  
+      
       {palettes.map((palette, index) => (
         <PaletteDetails
           key={`${palette._id}-${index}`}
