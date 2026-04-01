@@ -6,5 +6,7 @@ export async function getFavoritePalettes() {
   const userId = getUserId();
   const res = await fetch(`${API_BASE}/api/palettes/${userId}`);
 
-  return await res.json();
+  const data = await res.json();
+
+  return data.data;
 }
