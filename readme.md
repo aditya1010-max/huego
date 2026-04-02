@@ -18,8 +18,8 @@ The application focuses on clean UI design, responsive interactions, and efficie
 
 ## 🛠️ Tech Stack
 
-- JavaScript / TypeScript  
-- React (or similar frontend framework)  
+- TypeScript  
+- React 
 - CSS for styling and layout  
 
 ---
